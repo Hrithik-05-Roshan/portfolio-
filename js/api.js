@@ -1,26 +1,31 @@
 const API_BASE = "https://portfolio-backend-c6ui.onrender.com";
 
-document.getElementById("contactForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
+const form = document.getElementById("contactForm");
 
-  const data = {
-    name: e.target[0].value,
-    email: e.target[1].value,
-    message: e.target[2].value
-  };
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // ⛔ stops page reload
 
-  try {
-    const res = await fetch(`${API_BASE}/api/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
+    const data = {
+      name: form.elements[0].value,
+      email: form.elements[1].value,
+      message: form.elements[2].value,
+    };
 
-    if (!res.ok) throw new Error("Failed");
+    try {
+      const res = await fetch(`${API_BASE}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    alert("Message sent successfully!");
-    e.target.reset();
-  } catch {
-    alert("Error sending message");
-  }
-});
+      if (!res.ok) throw new Error("Request failed");
+
+      alert("Message sent successfully!");
+      form.reset();
+    } catch (error) {
+      alert("Failed to send message");
+      console.error(error);
+    }
+  });
+}
