@@ -8,14 +8,14 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline();
 const tl2 = gsap.timeline();
 
-tl.from(".nav h2", {
+tl.from(".navbar h2", {
   y: -20,
   opacity: 0,
   duration: 0.4,
   delay: 0.4,
 });
 
-tl.from(".nav h4", {
+tl.from(".navbar i", {
   y: -20,
   opacity: 0,
   duration: 0.3,
@@ -29,7 +29,7 @@ tl.from(".hero", {
   stagger:0.3
 });
 
-tl.from(".about p", {
+tl.from("#about p", {
   opacity: 0,
   duration: 0.6,
 });
@@ -52,7 +52,7 @@ tl2.from(".box1, .box2, .bubble p", {
 });
 
 gsap.to(".page1", {
-  opacity: 0,
+  // opacity: 0,
   scrollTrigger: {
     trigger: ".page2",
     start: "top 90%",
@@ -159,3 +159,100 @@ window.addEventListener("load", () => {
 // })
 
 
+var menu = document.querySelector(".navbar i")
+var close = document.querySelector(".tag i")
+
+var TL = gsap.timeline()
+var TL2 = gsap.timeline()
+
+TL.to(".tag",{
+    right:0,
+    duration:0.3
+})
+TL.from(".tag a",{
+    opacity:0,
+    x:150,
+    duration:0.3,
+    stagger:0.1
+})
+TL2.from(".tag i",{
+    dalay:3,    
+    opacity:0,
+})
+
+TL.pause()
+TL2.pause()
+
+menu.addEventListener("click",function(){
+    TL.play()
+    TL2.play()
+})
+
+close.addEventListener("click", function(){
+    TL.reverse()
+})
+/*
+  Scroll distance is divided into 4 equal segments.
+  Dot moves continuously.
+  Cards appear when dot crosses their segment.
+*/
+
+const tln = gsap.timeline({
+  // x:"-50%",
+  scrollTrigger: {
+    trigger: ".edu-section",
+    start: "top top",
+    end: "top -300",
+    scrub: 2,
+    pin:true,
+  }
+});
+// gsap.to(".page2 h1", {
+//   x: "-61%",
+//   scrollTrigger: {
+//     trigger: ".page2",
+//     start: "top top",
+//     end: "top -300%",
+//     scrub: 1.5,
+//     pin: true,
+//   },
+// });
+// tln.to({}, { duration: 0.6 });
+
+/* Move dot from left to right */
+tln.to(".edu-dot", {
+  xPercent: 5650,
+  ease: "none",
+  scrub:2,
+});
+
+/* Reveal cards at checkpoints */
+tln.to(".card-1", {
+  opacity: 1,
+  y: 0,
+  scale: 1,
+  // ease: "back.out(1.7)"
+}, 0.2);
+
+tln.to(".card-2", {
+  opacity: 1,
+  y: 0,
+  scale: 1,
+  // ease: "back.out(1.7)"
+}, 0.4);
+
+tln.to(".card-3", {
+  opacity: 1,
+  y: 0,
+  scale: 1,
+  // ease: "back.out(1.7)"
+}, 0.6);
+
+tln.to(".card-4", {
+  opacity: 1,
+  y: 0,
+  scale: 1,
+  // ease: "back.out(1.7)"
+}, 0.8);
+
+// tln.to({}, { duration: 0.6 });
