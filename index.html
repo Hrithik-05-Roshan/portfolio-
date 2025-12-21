@@ -1,131 +1,326 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hrithik | Full Stack Developer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hrithik Burnwal Portfolio</title>
+    <link rel="stylesheet" href="webstyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <div class="page1">
+      <div class="nav">
+        <h2>Hrithik Burnwal</h2>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/style.css" />
+        <div class="tag">
+          <h4>About</h4>
+          <h4>Projects</h4>
+          <h4>Experience</h4>
+          <h4>Blogs</h4>
+          <h4>Contact</h4>
+        </div>
+      </div>
+      <div class="hero">
+        <h1 id="top">hello, I'm</h1>
+        <h1 id="down">Hrithik Burnwal</h1>
+      </div>
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-</head>
-<body>
+      <div class="about">
+        <p class="me">
+          A <span> B-Tech CSE</span> student at
+          <span>Asansol Engineering College (2024–2028)</span> and
+          <span>full-stack developer</span> focused on <span>Frontend</span>,
+          turning ideas into real-world solutions—this mindset led me to start
+          <a
+            href="https://www.instagram.com/framelit.studio/"
+            target="_blank"
+            style="color: rgb(255, 255, 255); text-decoration: underline"
+            ><strong>Framelit</strong></a
+          >. I contribute to open-source projects, join hackathons, and
+          collaborate actively within the developer community.
+          <br /><br />Beyond coding, I mentor students in <span>Physics</span>,
+          play <span>Chess, Cricket</span>, create Content, edit Videos and
+          watch Anime. I believe in continuous learning through building,
+          teaching, and sharing knowledge. <br /><br />I'm Available for
+          <span>internships, full-time positions,</span> and
+          <span>freelance projects,</span> and keen on collaborative
+          environments.
+        </p>
+      </div>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Hrithik</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="./messages.html">Messages</a></li>
-    </ul>
-  </nav>
+      <div class="bubble">
+        <p>
+          I design with intent,<br />code with precision, and<br />ship on
+          time—every single time.
+        </p>
+      </div>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <h1 class="hero-title">Hi, I’m Hrithik</h1>
-    <h2 class="hero-subtitle">Full Stack Developer</h2>
-    <p class="hero-text">
-      I build scalable web apps, clean UIs, and production-ready systems using
-      modern web technologies.
-    </p>
+      <div class="box1">. . .</div>
+      <div class="box2">...</div>
 
-    <div class="hero-buttons">
-      <a href="#projects" class="btn primary">View Projects</a>
-      <a href="#contact" class="btn secondary">Contact Me</a>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <h2 class="section-title">About Me</h2>
-    <p class="about-text">
-      I’m Hrithik, a passionate full stack developer who loves building real-world
-      applications from scratch. I specialize in JavaScript, Node.js, Express,
-      MongoDB, and modern frontend development.  
-      <br><br>
-      I’m currently focused on sharpening my backend skills, system design,
-      and building production-grade projects that actually solve problems.
-      Teaching, coding, and continuous growth define my journey.
-    </p>
-  </section>
-  <!-- Education  -->
-   <section id="education" class="education">
-  <h2 class="section-title">Education</h2>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <span class="year">2022 - Present</span>
-      <h3>Bachelor’s Degree</h3>
-      <p>Focused on Computer Science fundamentals, programming, and problem-solving.</p>
-    </div>
-
-    <div class="timeline-item">
-      <span class="year">2020 - 2022</span>
-      <h3>Higher Secondary</h3>
-      <p>Strong foundation in Mathematics and Physics.</p>
-    </div>
-  </div>
-</section>
-
-<!-- skills -->
-<section id="skills" class="skills">
-  <h2 class="section-title">Skills</h2>
-
-  <div class="skills-grid">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">Node.js</div>
-    <div class="skill">Express.js</div>
-    <div class="skill">MongoDB</div>
-    <div class="skill">Git & GitHub</div>
-    <div class="skill">Figma</div>
-  </div>
-</section>
-<!-- Projects -->
-<section id="projects" class="projects">
-  <h2 class="section-title">Projects</h2>
-
-  <div class="projects-grid">
-    <div class="project-card">
-      <h3>Attendance Tracker System</h3>
-      <p>Role-based attendance system with student, teacher, and admin dashboards.</p>
-      <p><strong>Tech:</strong> HTML, CSS, JS, Node, MongoDB</p>
-      <a href="#">GitHub</a>
+      <img id="one" src="./images/two.jpeg" alt="" />
+      <img id="two" src="./images/four.jpeg" alt="" />
+      <img id="three" src="./images/six.jpeg" alt="" />
+      <img id="four" src="./images/one.jpeg" alt="" />
+      <img id="five" src="./images/five.jpeg" alt="" />
+      <img id="six" src="./images/ten.jpeg" alt="" />
     </div>
 
-    <div class="project-card">
-      <h3>Institute Management Website</h3>
-      <p>Full frontend system for managing courses, students, and dashboards.</p>
-      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-      <a href="#">GitHub</a>
+    <div class="page2">
+      <div class="page2-inner">
+        <h1>Expertise</h1>
+      </div>
     </div>
-  </div>
-</section>
-<!-- Contact us  -->
-<section id="contact" class="contact">
-  <h2 class="section-title">Contact Me</h2>
 
-  <form id="contactForm">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+    <div class="page3">
+      <div class="skillContainer">
+        <h2>Skills i bring to the table :</h2>
+        <div class="skills">
+          <div class="firstScroll">
+            <div class="logo">
+              <img src="./images/html-1.svg" alt="HTML" />
+              <span>HTML</span>
+            </div>
 
+            <div class="logo">
+              <img src="./images/css-3.svg" alt="CSS" />
+              <span>CSS</span>
+            </div>
 
-  <!-- JS -->
-  <script src="./js/gsap.js"></script>
-  <script src="./js/api.js"></script>
-</body>
+            <div class="logo">
+              <img src="./images/javascript-r.svg" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/react-2.svg" alt="React" />
+              <span>React</span>
+            </div>
+
+            <div class="logo">
+              <img
+                src="./images/tailwindcss-icon-svgrepo-com.svg"
+                alt="Tailwind CSS"
+              />
+              <span>Tailwind CSS</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/gsap-greensock.svg" alt="GSAP" />
+              <span>GSAP</span>
+            </div>
+            <div class="logo">
+              <img src="./images/html-1.svg" alt="HTML" />
+              <span>HTML</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/css-3.svg" alt="CSS" />
+              <span>CSS</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/javascript-r.svg" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/react-2.svg" alt="React" />
+              <span>React</span>
+            </div>
+
+            <div class="logo">
+              <img
+                src="./images/tailwindcss-icon-svgrepo-com.svg"
+                alt="Tailwind CSS"
+              />
+              <span>Tailwind CSS</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/gsap-greensock.svg" alt="GSAP" />
+              <span>GSAP</span>
+            </div>
+          </div>
+
+          <div class="secondScroll">
+            <div class="logo">
+              <img src="./images/c-logo-svgrepo-com.svg" alt="C++" />
+              <span>C++</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/python-svgrepo-com.svg" alt="Python" />
+              <span>Python</span>
+            </div>
+
+            <div class="logo">
+              <img
+                src="./images/nodejs-icon-logo-svgrepo-com.svg"
+                alt="Node.js"
+              />
+              <span>Node.js</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/express-svgrepo-com.svg" alt="Express" />
+              <span>Express</span>
+            </div>
+
+            <div class="logo">
+              <img
+                src="./images/adobe-after-effects-svgrepo-com.svg"
+                alt="After Effects"
+              />
+              <span>After Effects</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/git-icon-logo-svgrepo-com.svg" alt="Git" />
+              <span>Git</span>
+            </div>
+            <div class="logo">
+              <img src="./images/c-logo-svgrepo-com.svg" alt="C++" />
+              <span>C++</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/python-svgrepo-com.svg" alt="Python" />
+              <span>Python</span>
+            </div>
+
+            <div class="logo">
+              <img
+                src="./images/nodejs-icon-logo-svgrepo-com.svg"
+                alt="Node.js"
+              />
+              <span>Node.js</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/express-svgrepo-com.svg" alt="Express" />
+              <span>Express</span>
+            </div>
+
+            <div class="logo">
+              <img
+                src="./images/adobe-after-effects-svgrepo-com.svg"
+                alt="After Effects"
+              />
+              <span>After Effects</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/git-icon-logo-svgrepo-com.svg" alt="Git" />
+              <span>Git</span>
+            </div>
+          </div>
+
+          <div class="thirdScroll">
+            <div class="logo">
+              <img src="./images/github-icon-svgrepo-com.svg" alt="GitHub" />
+              <span>GitHub</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/vercel-icon-svgrepo-com.svg" alt="Vercel" />
+              <span>Vercel</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/mongo-svgrepo-com.svg" alt="MongoDB" />
+              <span>MongoDB</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/drawing-svgrepo-com.svg" alt="UI/UX" />
+              <span>UI/UX</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/figma-1-logo-svgrepo-com.svg" alt="Figma" />
+              <span>Figma</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/nextjs-icon-svgrepo-com.svg" alt="Next.js" />
+              <span>Next.js</span>
+            </div>
+            <div class="logo">
+              <img src="./images/github-icon-svgrepo-com.svg" alt="GitHub" />
+              <span>GitHub</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/vercel-icon-svgrepo-com.svg" alt="Vercel" />
+              <span>Vercel</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/mongo-svgrepo-com.svg" alt="MongoDB" />
+              <span>MongoDB</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/drawing-svgrepo-com.svg" alt="UI/UX" />
+              <span>UI/UX</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/figma-1-logo-svgrepo-com.svg" alt="Figma" />
+              <span>Figma</span>
+            </div>
+
+            <div class="logo">
+              <img src="./images/nextjs-icon-svgrepo-com.svg" alt="Next.js" />
+              <span>Next.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="string">
+        <svg viewBox="0 0 1280 100" preserveAspectRatio="none">
+          <path
+            d="M 40 50 Q 640 50 1240 50"
+            stroke="white"
+            stroke-width="2"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div class="main">
+        <div id="image">
+          <div id="overlay"></div>
+          <img src="./images/mode_background copy.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/gsap.js"></script>
+  </body>
 </html>
