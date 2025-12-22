@@ -1,5 +1,5 @@
 
-var main = document.querySelector(".main")
+var main = document.querySelector("body")
 var cursor = document.querySelector("#cursor")
 var image = document.querySelector("#image")
 
@@ -122,14 +122,14 @@ window.addEventListener("load", () => {
   });
 });
 
-// main.addEventListener("mousemove", function (dets) {
-//     gsap.to(cursor,{
-//         x:dets.x,
-//         y:dets.y,
-//         duration:0.6,
-//         ease:"back.out"
-//     })  
-// })
+main.addEventListener("mousemove", function (dets) {
+    gsap.to(cursor,{
+        x:dets.x,
+        y:dets.y,
+        duration:0.6,
+        ease:"back.out(2,0.1)",
+    })  
+})
 
 // image.addEventListener("mouseenter", function () {
 //     cursor.innerHTML = "<p>View<br>More</p>"
@@ -145,18 +145,12 @@ window.addEventListener("load", () => {
 //     })
 // })
 
-// main.addEventListener("mouseenter", function () {
-//     gsap.to(cursor,{
-//         opacity:1,
-//         duration:0.3
-//     })  
-// })
-// main.addEventListener("mouseleave", function () {
-//     gsap.to(cursor,{
-//         opacity:0,
-//         // duration:0.3
-//     })  
-// })
+main.addEventListener("mouseenter", function () {
+    gsap.to(cursor,{
+        opacity:1,
+        duration:0.3
+    })  
+})
 
 
 var menu = document.querySelector(".navbar i")
@@ -256,3 +250,23 @@ tln.to(".card-4", {
 }, 0.8);
 
 // tln.to({}, { duration: 0.6 });
+
+gsap.from(".left-project", {
+  x: -300,
+  opacity: 0,
+  delay:0.5,
+  scrollTrigger: {
+    trigger: ".page4",
+    start: "top 70%",
+  },
+});
+
+gsap.from(".right-project", {
+  delay:0.5,
+  x: 300,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".page4",
+    start: "top 95%",
+  },
+});
