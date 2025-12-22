@@ -652,7 +652,7 @@ body {
   justify-content: space-between;
 }
 
-.contact-footer {
+.contact {
   /* background: lightseagreen; */
   display: flex;
   flex-direction: column;
@@ -664,21 +664,21 @@ body {
   /* border-top: 1px solid #222; */
 }
 
-.contact-footer h2 {
+.contact h2 {
   color: #66ff00;
   font-size: 40px;
   margin-bottom: 30px;
 }
 
-.contact-form {
+#contactForm {
   max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
+#contactForm input,
+#contactForm textarea {
   padding: 15px;
   background: #ffffff;
   border: 1px solid #333;
@@ -687,7 +687,7 @@ body {
   font-size: 20px;
 }
 
-.contact-form button {
+#contactForm button {
   background: #66ff00;
   color: black;
   padding: 15px;
@@ -697,6 +697,13 @@ body {
   cursor: pointer;
   font-size: 20px;
 }
+
+
+
+
+
+
+
 
 .ref-footer {
   margin-left: 20px;
