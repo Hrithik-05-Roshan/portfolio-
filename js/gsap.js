@@ -51,15 +51,15 @@ tl2.from(".box1, .box2, .bubble p", {
   stagger: 0.1,
 });
 
-gsap.to(".page1", {
-  // opacity: 0,
-  scrollTrigger: {
-    trigger: ".page2",
-    start: "top 90%",
-    end: "top 60%",
-    scrub: true,
-  },
-});
+// gsap.to(".page1", {
+//   // opacity: 0,
+//   scrollTrigger: {
+//     trigger: ".page2",
+//     start: "top 90%",
+//     end: "top 60%",
+//     scrub: true,
+//   },
+// });
 
 // Page2 pinned scrolling text
 gsap.to(".page2 h1", {
@@ -80,8 +80,8 @@ window.addEventListener("load", () => {
 
   if (!svg || !path) return;
 
-  const LEFT = 40;
-  const RIGHT = 1240;
+  const LEFT = 10;
+  const RIGHT = 1275;
   const MID = 640;
   const BASE_Y = 50;
 
