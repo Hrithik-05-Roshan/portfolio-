@@ -1,31 +1,38 @@
-const API_BASE = "https://portfolio-backend-c6ui.onrender.com";
-
 const form = document.getElementById("contactForm");
 
 if (form) {
   form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // ⛔ stops page reload
+    e.preventDefault(); // ⛔ stop page reload
 
-    const data = {
-      name: form.elements[0].value,
-      email: form.elements[1].value,
-      message: form.elements[2].value,
-    };
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("All fields are required");
+      return;
+    }
 
     try {
-      const res = await fetch(`${API_BASE}/api/contact`, {
+      const res = await fetch("https://portfolio-backend-c6ui.onrender.com/api/messages", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
       });
 
-      if (!res.ok) throw new Error("Request failed");
+      const data = await res.json();
 
-      alert("Message sent successfully!");
-      form.reset();
-    } catch (error) {
-      alert("Failed to send message");
-      console.error(error);
+      if (res.ok) {
+        alert("Message sent successfully 🚀");
+        form.reset();
+      } else {
+        alert(data.message || "Something went wrong");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Server not reachable");
     }
   });
 }
